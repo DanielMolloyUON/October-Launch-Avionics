@@ -1,27 +1,41 @@
 EESchema-DOCLIB  Version 2.0
 #
-$CMP NE555DR
-D Single Precision Timer
-K
-F http://www.ti.com/lit/ds/symlink/ne555.pdf
+$CMP 790
+D GPS Modules Ultimate GPS Module MTK3339 Chipset
+F https://cdn-shop.adafruit.com/datasheets/GlobalTop-FGPMMOPA6H-Datasheet-V0A.pdf
 $ENDCMP
 #
 $CMP BMP384
 D Board Mount Pressure Sensors Absolute Pressure Sensor
-K
 F https://www.mouser.in/datasheet/2/783/bst_bmp384_ds003-1954011.pdf
-$ENDCMP
-#
-$CMP 790
-D GPS Modules Ultimate GPS Module MTK3339 Chipset
-K
-F https://cdn-shop.adafruit.com/datasheets/GlobalTop-FGPMMOPA6H-Datasheet-V0A.pdf
 $ENDCMP
 #
 $CMP MPU-6050
 D IMUs - Inertial Measurement Units 6-Axis MEMS MotionTracking Device with DMP
-K
 F https://datasheet.lcsc.com/szlcsc/TDK-InvenSense-MPU-6050_C24112.pdf
+$ENDCMP
+#
+$CMP NE555DR
+D Single Precision Timer
+F http://www.ti.com/lit/ds/symlink/ne555.pdf
+$ENDCMP
+#
+$CMP 101019966912A
+D Conn Micro SD Card SKT 17 POS Solder RA SMD 0.5A/Contact T/R
+K
+F https://cdn.amphenol-icc.com/media/wysiwyg/files/drawing/c10101996.pdf
+$ENDCMP
+#
+$CMP MEM2075-00-140-01-A
+D GCT (GLOBAL CONNECTOR TECHNOLOGY) - MEM2075-00-140-01-A - MICRO SD CARD CONN, PUSH-PUSH, 9POS, SMT
+K
+F 
+$ENDCMP
+#
+$CMP U.FL-R-SMT_01_
+D Hirose 50 Straight Surface Mount, jack Ultra Small Surface Mount Coaxial Connectors - 1.9mm or 2.3mm, 2.4mm Mated Height
+K
+F https://componentsearchengine.com/Datasheets/2/U.FL-R-SMT(01).pdf
 $ENDCMP
 #
 #End Doc Library
