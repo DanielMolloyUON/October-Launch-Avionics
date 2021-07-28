@@ -1,0 +1,27 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP NE555DR
+D Single Precision Timer
+K
+F http://www.ti.com/lit/ds/symlink/ne555.pdf
+$ENDCMP
+#
+$CMP BMP384
+D Board Mount Pressure Sensors Absolute Pressure Sensor
+K
+F https://www.mouser.in/datasheet/2/783/bst_bmp384_ds003-1954011.pdf
+$ENDCMP
+#
+$CMP 790
+D GPS Modules Ultimate GPS Module MTK3339 Chipset
+K
+F https://cdn-shop.adafruit.com/datasheets/GlobalTop-FGPMMOPA6H-Datasheet-V0A.pdf
+$ENDCMP
+#
+$CMP MPU-6050
+D IMUs - Inertial Measurement Units 6-Axis MEMS MotionTracking Device with DMP
+K
+F https://datasheet.lcsc.com/szlcsc/TDK-InvenSense-MPU-6050_C24112.pdf
+$ENDCMP
+#
+#End Doc Library
