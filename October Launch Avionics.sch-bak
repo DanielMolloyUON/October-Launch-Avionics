@@ -99,8 +99,6 @@ Text GLabel 1400 4550 1    50   Input ~ 0
 SDA
 Text GLabel 1500 4550 1    50   Input ~ 0
 SCL
-Text Notes 6450 3150 0    50   ~ 0
-*PULLUP Resistors for I2c
 $Comp
 L power:+3.3V #PWR015
 U 1 1 6101BFE1
@@ -708,4 +706,76 @@ Text GLabel 8000 2550 3    50   Input ~ 0
 MOSI
 Text GLabel 9100 2550 3    50   Input ~ 0
 SD_CS
+NoConn ~ 6500 4950
+NoConn ~ 7800 5050
+NoConn ~ 7800 4950
+$Comp
+L power:+3.3V #PWR?
+U 1 1 61080F74
+P 9800 1950
+F 0 "#PWR?" H 9800 1800 50  0001 C CNN
+F 1 "+3.3V" H 9750 2100 50  0000 C CNN
+F 2 "" H 9800 1950 50  0001 C CNN
+F 3 "" H 9800 1950 50  0001 C CNN
+	1    9800 1950
+	1    0    0    -1  
+$EndComp
+Text GLabel 9600 1350 1    50   Input ~ 0
+EN
+Text GLabel 10550 5850 1    50   Input ~ 0
+EN
+$Comp
+L SamacSys_Parts:PTS645SM43JSMTR92_LFS S?
+U 1 1 61081AFF
+P 9350 5850
+F 0 "S?" H 9950 6115 50  0000 C CNN
+F 1 "PTS645SM43JSMTR92_LFS" H 9950 6024 50  0000 C CNN
+F 2 "PTS645SM43JSMTR92LFS" H 10400 5950 50  0001 L CNN
+F 3 "https://www.mouser.tw/ProductDetail/CK/PTS645SM43JSMTR92-LFS?qs=TiOZkKH1s2T1Y3ae9C0wSg%3D%3D" H 10400 5850 50  0001 L CNN
+F 4 "Tactile Switches 50mA 12VDC, SPST NO, 160 gf, 4.3mm H, SMT J-type" H 10400 5750 50  0001 L CNN "Description"
+F 5 "4.8" H 10400 5650 50  0001 L CNN "Height"
+F 6 "611-SM43JSMTR92LFS" H 10400 5550 50  0001 L CNN "Mouser Part Number"
+F 7 "https://www.mouser.co.uk/ProductDetail/CK/PTS645SM43JSMTR92-LFS?qs=TiOZkKH1s2T1Y3ae9C0wSg%3D%3D" H 10400 5450 50  0001 L CNN "Mouser Price/Stock"
+F 8 "C & K COMPONENTS" H 10400 5350 50  0001 L CNN "Manufacturer_Name"
+F 9 "PTS645SM43JSMTR92 LFS" H 10400 5250 50  0001 L CNN "Manufacturer_Part_Number"
+	1    9350 5850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 61083EA1
+P 9350 5950
+F 0 "#PWR?" H 9350 5700 50  0001 C CNN
+F 1 "GND" H 9355 5777 50  0000 C CNN
+F 2 "" H 9350 5950 50  0001 C CNN
+F 3 "" H 9350 5950 50  0001 C CNN
+	1    9350 5950
+	1    0    0    -1  
+$EndComp
+Text GLabel 9350 5850 1    50   Input ~ 0
+EN
+$Comp
+L Device:R R?
+U 1 1 61088122
+P 9050 5700
+F 0 "R?" H 9120 5746 50  0000 L CNN
+F 1 "330" H 9120 5655 50  0000 L CNN
+F 2 "" V 8980 5700 50  0001 C CNN
+F 3 "~" H 9050 5700 50  0001 C CNN
+	1    9050 5700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR?
+U 1 1 61088AE9
+P 9050 5550
+F 0 "#PWR?" H 9050 5400 50  0001 C CNN
+F 1 "+3.3V" H 9000 5700 50  0000 C CNN
+F 2 "" H 9050 5550 50  0001 C CNN
+F 3 "" H 9050 5550 50  0001 C CNN
+	1    9050 5550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9050 5850 9350 5850
 $EndSCHEMATC
