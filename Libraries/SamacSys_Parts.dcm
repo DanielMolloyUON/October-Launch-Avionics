@@ -38,4 +38,10 @@ K
 F https://componentsearchengine.com/Datasheets/2/U.FL-R-SMT(01).pdf
 $ENDCMP
 #
+$CMP PTS645SM43JSMTR92_LFS
+D Tactile Switches 50mA 12VDC, SPST NO, 160 gf, 4.3mm H, SMT J-type
+K
+F https://www.mouser.tw/ProductDetail/CK/PTS645SM43JSMTR92-LFS?qs=TiOZkKH1s2T1Y3ae9C0wSg%3D%3D
+$ENDCMP
+#
 #End Doc Library
