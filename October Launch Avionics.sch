@@ -776,61 +776,17 @@ F 3 "https://www.usb.org/sites/default/files/documents/usb_type-c.zip" H 6850 36
 	1    6700 3600
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	7100 3250 7100 2950
-Wire Wire Line
-	6900 3250 6900 3150
-Wire Wire Line
-	9500 2550 9500 2950
-Wire Wire Line
-	9500 2950 10300 2950
-Wire Wire Line
-	10300 2950 10300 3300
-Wire Wire Line
-	9000 4700 7900 4700
-Wire Wire Line
-	7900 4700 7900 4500
 Wire Notes Line
 	10950 6250 10950 800 
 Wire Notes Line
 	6000 6250 10700 6250
 Text GLabel 9700 3300 1    50   Input ~ 0
 D-
-Wire Wire Line
-	10200 3100 10200 3300
-Wire Wire Line
-	9300 3100 10200 3100
-Wire Wire Line
-	9300 2550 9300 3100
-Wire Wire Line
-	6700 4500 7900 4500
 Text GLabel 9800 3300 1    50   Input ~ 0
 D+
-Text GLabel 7850 3700 1    50   Input ~ 0
+Text GLabel 7300 3700 1    50   Input ~ 0
 D+
-$Comp
-L Power_Protection:SP0503BAHT D?
-U 1 1 611016B0
-P 7950 4050
-F 0 "D?" H 8155 4096 50  0000 L CNN
-F 1 "SP0503BAHT" H 8155 4005 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:SOT-143" H 8175 4000 50  0001 L CNN
-F 3 "http://www.littelfuse.com/~/media/files/littelfuse/technical%20resources/documents/data%20sheets/sp05xxba.pdf" H 8075 4175 50  0001 C CNN
-	1    7950 4050
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:Earth #PWR?
-U 1 1 61105D3A
-P 7950 4400
-F 0 "#PWR?" H 7950 4150 50  0001 C CNN
-F 1 "Earth" H 7950 4250 50  0001 C CNN
-F 2 "" H 7950 4400 50  0001 C CNN
-F 3 "~" H 7950 4400 50  0001 C CNN
-	1    7950 4400
-	1    0    0    -1  
-$EndComp
-Text GLabel 8050 3000 2    50   Input ~ 0
+Text GLabel 7300 3000 1    50   Input ~ 0
 VBUS
 NoConn ~ 9500 3300
 NoConn ~ 9200 4700
@@ -844,77 +800,127 @@ NoConn ~ 10400 4700
 NoConn ~ 6400 4500
 NoConn ~ 7300 3300
 NoConn ~ 7300 3200
-Text GLabel 7950 3500 1    50   Input ~ 0
+Text GLabel 7300 3500 1    50   Input ~ 0
 D-
-Wire Wire Line
-	7300 3000 8050 3000
-Wire Wire Line
-	8050 3000 8050 3850
-Wire Wire Line
-	7950 3500 7300 3500
-Wire Wire Line
-	7950 3500 7950 3850
-Wire Wire Line
-	7300 3700 7850 3700
-Wire Wire Line
-	7850 3850 7850 3700
-Wire Wire Line
-	7950 4250 7950 4400
 NoConn ~ 10000 3300
 NoConn ~ 10100 3300
-Text GLabel 9150 4950 0    50   Input ~ 0
+Text GLabel 10200 5150 0    50   Input ~ 0
 VBUS
 Wire Wire Line
-	9650 5250 9650 4950
+	10300 5150 10400 5150
 Wire Wire Line
-	9900 5250 9650 5250
-Wire Wire Line
-	10700 5250 10800 5250
-Wire Wire Line
-	10300 5250 10400 5250
-Wire Wire Line
-	10300 5250 10200 5250
-Connection ~ 10300 5250
-Wire Wire Line
-	10300 4700 10300 5250
-$Comp
-L Device:R R?
-U 1 1 610C2020
-P 10050 5250
-F 0 "R?" V 9843 5250 50  0000 C CNN
-F 1 "22.1k" V 9934 5250 50  0000 C CNN
-F 2 "" V 9980 5250 50  0001 C CNN
-F 3 "~" H 10050 5250 50  0001 C CNN
-	1    10050 5250
-	0    1    1    0   
-$EndComp
+	10300 4700 10300 5150
 $Comp
 L Device:R R?
 U 1 1 610C423B
-P 10550 5250
-F 0 "R?" V 10343 5250 50  0000 C CNN
-F 1 "47.5k" V 10434 5250 50  0000 C CNN
-F 2 "" V 10480 5250 50  0001 C CNN
-F 3 "~" H 10550 5250 50  0001 C CNN
-	1    10550 5250
+P 10550 5150
+F 0 "R?" V 10343 5150 50  0000 C CNN
+F 1 "47.5k" V 10434 5150 50  0000 C CNN
+F 2 "" V 10480 5150 50  0001 C CNN
+F 3 "~" H 10550 5150 50  0001 C CNN
+	1    10550 5150
 	0    1    1    0   
 $EndComp
+Wire Wire Line
+	10200 4700 10200 4800
 $Comp
-L power:Earth #PWR?
-U 1 1 610C5906
-P 10800 5250
-F 0 "#PWR?" H 10800 5000 50  0001 C CNN
-F 1 "Earth" H 10800 5100 50  0001 C CNN
-F 2 "" H 10800 5250 50  0001 C CNN
-F 3 "~" H 10800 5250 50  0001 C CNN
-	1    10800 5250
+L October-Launch-Avionics-rescue:GND-power #PWR?
+U 1 1 610AB54E
+P 9000 4700
+F 0 "#PWR?" H 9000 4450 50  0001 C CNN
+F 1 "GND" H 9005 4527 50  0000 C CNN
+F 2 "" H 9000 4700 50  0001 C CNN
+F 3 "" H 9000 4700 50  0001 C CNN
+	1    9000 4700
+	1    0    0    -1  
+$EndComp
+$Comp
+L October-Launch-Avionics-rescue:GND-power #PWR?
+U 1 1 610ADFD1
+P 6700 4500
+F 0 "#PWR?" H 6700 4250 50  0001 C CNN
+F 1 "GND" H 6705 4327 50  0000 C CNN
+F 2 "" H 6700 4500 50  0001 C CNN
+F 3 "" H 6700 4500 50  0001 C CNN
+	1    6700 4500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 610C2020
+P 10200 4950
+F 0 "R?" V 9993 4950 50  0000 C CNN
+F 1 "22.1k" V 10084 4950 50  0000 C CNN
+F 2 "" V 10130 4950 50  0001 C CNN
+F 3 "~" H 10200 4950 50  0001 C CNN
+	1    10200 4950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10200 5100 10200 5150
+Wire Wire Line
+	10300 5150 10200 5150
+Connection ~ 10300 5150
+$Comp
+L October-Launch-Avionics-rescue:GND-power #PWR?
+U 1 1 610BD0D9
+P 10750 5200
+F 0 "#PWR?" H 10750 4950 50  0001 C CNN
+F 1 "GND" H 10755 5027 50  0000 C CNN
+F 2 "" H 10750 5200 50  0001 C CNN
+F 3 "" H 10750 5200 50  0001 C CNN
+	1    10750 5200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10750 5200 10750 5150
+Wire Wire Line
+	10750 5150 10700 5150
+NoConn ~ 10550 5950
+Text GLabel 9300 2550 3    50   Input ~ 0
+UART_TX
+Text GLabel 9500 2550 3    50   Input ~ 0
+UART_RX
+Text GLabel 10200 3300 1    50   Input ~ 0
+UART_TX
+Text GLabel 10300 3300 1    50   Input ~ 0
+UART_RX
+$Comp
+L October-Launch-Avionics-rescue:GND-power #PWR?
+U 1 1 610AAC9B
+P 7900 3650
+F 0 "#PWR?" H 7900 3400 50  0001 C CNN
+F 1 "GND" H 7905 3477 50  0000 C CNN
+F 2 "" H 7900 3650 50  0001 C CNN
+F 3 "" H 7900 3650 50  0001 C CNN
+	1    7900 3650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Power_Protection:SP0503BAHT D?
+U 1 1 611016B0
+P 7650 3600
+F 0 "D?" H 7855 3646 50  0000 L CNN
+F 1 "SP0503BAHT" H 7855 3555 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-143" H 7875 3550 50  0001 L CNN
+F 3 "http://www.littelfuse.com/~/media/files/littelfuse/technical%20resources/documents/data%20sheets/sp05xxba.pdf" H 7775 3725 50  0001 C CNN
+	1    7650 3600
 	0    -1   -1   0   
 $EndComp
 Wire Wire Line
-	10200 4700 10200 4950
+	7900 3650 7900 3600
 Wire Wire Line
-	10200 4950 9650 4950
-Connection ~ 9650 4950
+	7900 3600 7850 3600
 Wire Wire Line
-	9650 4950 9150 4950
+	7300 3700 7450 3700
+Wire Wire Line
+	7300 3500 7400 3500
+Wire Wire Line
+	7400 3500 7400 3600
+Wire Wire Line
+	7400 3600 7450 3600
+Wire Wire Line
+	7300 3000 7450 3000
+Wire Wire Line
+	7450 3000 7450 3500
 $EndSCHEMATC
