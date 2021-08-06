@@ -26,36 +26,6 @@ Wire Notes Line
 Wire Notes Line
 	6000 6250 10700 6250
 Wire Notes Line
-	10700 800  6000 800 
-Text Notes 8000 750  0    50   ~ 0
-Teency & Peripherals
-$Comp
-L RF_Module:ESP32-WROOM-32D U1
-U 1 1 60F81389
-P 8400 1950
-F 0 "U1" V 7500 1900 50  0000 L CNN
-F 1 "ESP32-WROOM-32D" V 7350 1550 50  0000 L CNN
-F 2 "RF_Module:ESP32-WROOM-32" H 8400 450 50  0001 C CNN
-F 3 "https://www.espressif.com/sites/default/files/documentation/esp32-wroom-32d_esp32-wroom-32u_datasheet_en.pdf" H 8100 2000 50  0001 C CNN
-	1    8400 1950
-	0    1    1    0   
-$EndComp
-$Comp
-L power:GND #PWR0101
-U 1 1 60F84700
-P 6950 2000
-F 0 "#PWR0101" H 6950 1750 50  0001 C CNN
-F 1 "GND" H 6955 1827 50  0000 C CNN
-F 2 "" H 6950 2000 50  0001 C CNN
-F 3 "" H 6950 2000 50  0001 C CNN
-	1    6950 2000
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	7000 1950 6950 1950
-Wire Wire Line
-	6950 1950 6950 2000
-Wire Notes Line
 	850  800  5000 800 
 Wire Notes Line
 	850  3000 5000 3000
@@ -513,14 +483,6 @@ F 9 "MEM2075-00-140-01-A" H 7650 4350 50  0001 L CNN "Manufacturer_Part_Number"
 	1    6500 4950
 	1    0    0    -1  
 $EndComp
-Text GLabel 8200 2550 3    50   Input ~ 0
-SDA
-Text GLabel 8100 2550 3    50   Input ~ 0
-SCL
-Text GLabel 8600 2550 3    50   Input ~ 0
-RX
-Text GLabel 8500 2550 3    50   Input ~ 0
-TX
 Text GLabel 3150 6650 0    50   Input ~ 0
 RX
 NoConn ~ 3350 6150
@@ -695,14 +657,6 @@ F 3 "" H 7100 5950 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Text GLabel 6500 5950 0    50   Input ~ 0
-SD_CS
-Text GLabel 8400 2550 3    50   Input ~ 0
-SCK
-Text GLabel 8300 2550 3    50   Input ~ 0
-MISO
-Text GLabel 8000 2550 3    50   Input ~ 0
-MOSI
-Text GLabel 9100 2550 3    50   Input ~ 0
 SD_CS
 NoConn ~ 6500 4950
 NoConn ~ 7800 5050
@@ -907,104 +861,269 @@ Wire Wire Line
 Connection ~ 2050 1650
 Wire Wire Line
 	2050 1650 2300 1650
-Text GLabel 10400 4000 2    50   Input ~ 0
-SDA
-Text GLabel 10400 3900 2    50   Input ~ 0
-SCL
-$Comp
-L power:+5V #PWR0108
-U 1 1 610DD2AA
-P 10400 3800
-F 0 "#PWR0108" H 10400 3650 50  0001 C CNN
-F 1 "+5V" V 10415 3928 50  0000 L CNN
-F 2 "" H 10400 3800 50  0001 C CNN
-F 3 "" H 10400 3800 50  0001 C CNN
-	1    10400 3800
-	0    1    1    0   
-$EndComp
-$Comp
-L power:+5V #PWR0109
-U 1 1 610DE28A
-P 10400 4550
-F 0 "#PWR0109" H 10400 4400 50  0001 C CNN
-F 1 "+5V" V 10415 4678 50  0000 L CNN
-F 2 "" H 10400 4550 50  0001 C CNN
-F 3 "" H 10400 4550 50  0001 C CNN
-	1    10400 4550
-	0    1    1    0   
-$EndComp
-Text GLabel 10400 4650 2    50   Input ~ 0
-SCL
-Text GLabel 10400 4750 2    50   Input ~ 0
-SDA
 Wire Notes Line
 	10700 6250 10700 800 
+Text GLabel 1600 1150 0    50   Input ~ 0
+VBUS
+Text GLabel 10250 2400 2    50   Input ~ 0
+Spare_SDO
+Text GLabel 10250 2300 2    50   Input ~ 0
+Spare_SDI
+Text GLabel 10250 2100 2    50   Input ~ 0
+Spare_CS
+Text GLabel 10250 2200 2    50   Input ~ 0
+Spare_SCLK
 $Comp
-L Connector:Conn_01x04_Male J4
-U 1 1 610C9665
-P 10200 4650
-F 0 "J4" H 10308 4931 50  0000 C CNN
-F 1 "Conn_01x04_Male" H 10308 4840 50  0000 C CNN
-F 2 "Connector_Molex:Molex_Micro-Fit_3.0_43650-0415_1x04_P3.00mm_Vertical" H 10200 4650 50  0001 C CNN
-F 3 "~" H 10200 4650 50  0001 C CNN
-	1    10200 4650
+L Connector:Conn_01x05_Male J?
+U 1 1 61113D80
+P 10050 2300
+F 0 "J?" H 10158 2681 50  0000 C CNN
+F 1 "Mirco Molex 5 Pin SPI" H 10158 2590 50  0000 C CNN
+F 2 "" H 10050 2300 50  0001 C CNN
+F 3 "~" H 10050 2300 50  0001 C CNN
+	1    10050 2300
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector:Conn_01x04_Male J3
-U 1 1 610C8D76
-P 10200 3900
-F 0 "J3" H 10308 4181 50  0000 C CNN
-F 1 "Conn_01x04_Male" H 10308 4090 50  0000 C CNN
-F 2 "Connector_Molex:Molex_Micro-Fit_3.0_43650-0415_1x04_P3.00mm_Vertical" H 10200 3900 50  0001 C CNN
-F 3 "~" H 10200 3900 50  0001 C CNN
-	1    10200 3900
+L Connector:Conn_01x05_Male J?
+U 1 1 610FA242
+P 10050 2950
+F 0 "J?" H 10158 3331 50  0000 C CNN
+F 1 "Micro Molex 5 Pin - I2C" H 10158 3240 50  0000 C CNN
+F 2 "" H 10050 2950 50  0001 C CNN
+F 3 "~" H 10050 2950 50  0001 C CNN
+	1    10050 2950
 	1    0    0    -1  
 $EndComp
+Text GLabel 10250 2950 2    50   Input ~ 0
+Spare_SCL
+Text GLabel 10250 3050 2    50   Input ~ 0
+Spare_SDA
 $Comp
-L power:GND1 #PWR0110
-U 1 1 610E4DE9
-P 10400 4850
-F 0 "#PWR0110" H 10400 4600 50  0001 C CNN
-F 1 "GND1" V 10405 4722 50  0000 R CNN
-F 2 "" H 10400 4850 50  0001 C CNN
-F 3 "" H 10400 4850 50  0001 C CNN
-	1    10400 4850
-	0    -1   -1   0   
+L power:+3.3VA #PWR?
+U 1 1 61109DB2
+P 10250 2850
+F 0 "#PWR?" H 10250 2700 50  0001 C CNN
+F 1 "+3.3VA" V 10265 2978 50  0000 L CNN
+F 2 "" H 10250 2850 50  0001 C CNN
+F 3 "" H 10250 2850 50  0001 C CNN
+	1    10250 2850
+	0    1    1    0   
 $EndComp
 $Comp
-L power:GND1 #PWR0111
-U 1 1 610E594D
-P 10400 4100
-F 0 "#PWR0111" H 10400 3850 50  0001 C CNN
-F 1 "GND1" V 10405 3972 50  0000 R CNN
-F 2 "" H 10400 4100 50  0001 C CNN
-F 3 "" H 10400 4100 50  0001 C CNN
-	1    10400 4100
-	0    -1   -1   0   
+L power:+5VA #PWR?
+U 1 1 61108C91
+P 10250 2750
+F 0 "#PWR?" H 10250 2600 50  0001 C CNN
+F 1 "+5VA" V 10265 2878 50  0000 L CNN
+F 2 "" H 10250 2750 50  0001 C CNN
+F 3 "" H 10250 2750 50  0001 C CNN
+	1    10250 2750
+	0    1    1    0   
 $EndComp
 $Comp
 L Connector:Conn_01x02_Male J5
 U 1 1 610E6367
-P 10200 1200
-F 0 "J5" H 10308 1381 50  0000 C CNN
-F 1 "Conn_01x02_Male" H 10308 1290 50  0000 C CNN
-F 2 "Connector_Molex:Molex_CLIK-Mate_502382-0270_1x02-1MP_P1.25mm_Vertical" H 10200 1200 50  0001 C CNN
-F 3 "~" H 10200 1200 50  0001 C CNN
-	1    10200 1200
+P 10050 1150
+F 0 "J5" H 10158 1331 50  0000 C CNN
+F 1 "Molex Mirco 2 Pin" H 10158 1240 50  0000 C CNN
+F 2 "Connector_Molex:Molex_CLIK-Mate_502382-0270_1x02-1MP_P1.25mm_Vertical" H 10050 1150 50  0001 C CNN
+F 3 "~" H 10050 1150 50  0001 C CNN
+	1    10050 1150
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:GND1 #PWR0112
 U 1 1 610E7E0D
-P 10400 1300
-F 0 "#PWR0112" H 10400 1050 50  0001 C CNN
-F 1 "GND1" V 10405 1172 50  0000 R CNN
-F 2 "" H 10400 1300 50  0001 C CNN
-F 3 "" H 10400 1300 50  0001 C CNN
-	1    10400 1300
+P 10250 1250
+F 0 "#PWR0112" H 10250 1000 50  0001 C CNN
+F 1 "GND1" V 10255 1122 50  0000 R CNN
+F 2 "" H 10250 1250 50  0001 C CNN
+F 3 "" H 10250 1250 50  0001 C CNN
+	1    10250 1250
 	0    -1   -1   0   
 $EndComp
-Text GLabel 10400 1200 2    50   Input ~ 0
+Text GLabel 10250 1150 2    50   Input ~ 0
 VBUS
+$Comp
+L Connector:Conn_01x04_Male J3
+U 1 1 610C8D76
+P 10050 3550
+F 0 "J3" H 10158 3831 50  0000 C CNN
+F 1 "Molex Micro 4 Pin #2" H 10158 3740 50  0000 C CNN
+F 2 "Connector_Molex:Molex_Micro-Fit_3.0_43650-0415_1x04_P3.00mm_Vertical" H 10050 3550 50  0001 C CNN
+F 3 "~" H 10050 3550 50  0001 C CNN
+	1    10050 3550
+	1    0    0    -1  
+$EndComp
+Text GLabel 10250 4150 2    50   Input ~ 0
+SDA
+Text GLabel 10250 4050 2    50   Input ~ 0
+SCL
+$Comp
+L power:+5V #PWR0109
+U 1 1 610DE28A
+P 10250 3950
+F 0 "#PWR0109" H 10250 3800 50  0001 C CNN
+F 1 "+5V" V 10265 4078 50  0000 L CNN
+F 2 "" H 10250 3950 50  0001 C CNN
+F 3 "" H 10250 3950 50  0001 C CNN
+	1    10250 3950
+	0    1    1    0   
+$EndComp
+$Comp
+L power:+5V #PWR0108
+U 1 1 610DD2AA
+P 10250 3450
+F 0 "#PWR0108" H 10250 3300 50  0001 C CNN
+F 1 "+5V" V 10265 3578 50  0000 L CNN
+F 2 "" H 10250 3450 50  0001 C CNN
+F 3 "" H 10250 3450 50  0001 C CNN
+	1    10250 3450
+	0    1    1    0   
+$EndComp
+Text GLabel 10250 3550 2    50   Input ~ 0
+SCL
+Text GLabel 10250 3650 2    50   Input ~ 0
+SDA
+$Comp
+L power:GND #PWR?
+U 1 1 6113741B
+P 10250 3150
+F 0 "#PWR?" H 10250 2900 50  0001 C CNN
+F 1 "GND" V 10255 3022 50  0000 R CNN
+F 2 "" H 10250 3150 50  0001 C CNN
+F 3 "" H 10250 3150 50  0001 C CNN
+	1    10250 3150
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 611392C9
+P 10250 2500
+F 0 "#PWR?" H 10250 2250 50  0001 C CNN
+F 1 "GND" V 10255 2372 50  0000 R CNN
+F 2 "" H 10250 2500 50  0001 C CNN
+F 3 "" H 10250 2500 50  0001 C CNN
+	1    10250 2500
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 6113BB55
+P 10250 3750
+F 0 "#PWR?" H 10250 3500 50  0001 C CNN
+F 1 "GND" V 10255 3622 50  0000 R CNN
+F 2 "" H 10250 3750 50  0001 C CNN
+F 3 "" H 10250 3750 50  0001 C CNN
+	1    10250 3750
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 6113CC00
+P 10250 4250
+F 0 "#PWR?" H 10250 4000 50  0001 C CNN
+F 1 "GND" V 10255 4122 50  0000 R CNN
+F 2 "" H 10250 4250 50  0001 C CNN
+F 3 "" H 10250 4250 50  0001 C CNN
+	1    10250 4250
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Connector:Conn_01x04_Male J?
+U 1 1 6114AF2E
+P 8200 5700
+F 0 "J?" V 8262 5844 50  0000 L CNN
+F 1 "Molex-Con - Cam" V 8353 5844 50  0000 L CNN
+F 2 "Connector_Molex:Molex_CLIK-Mate_502386-0470_1x04-1MP_P1.25mm_Horizontal" H 8200 5700 50  0001 C CNN
+F 3 "~" H 8200 5700 50  0001 C CNN
+	1    8200 5700
+	0    1    1    0   
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 6114D7CE
+P 8000 5900
+F 0 "#PWR?" H 8000 5750 50  0001 C CNN
+F 1 "+5V" H 8015 6073 50  0000 C CNN
+F 2 "" H 8000 5900 50  0001 C CNN
+F 3 "" H 8000 5900 50  0001 C CNN
+	1    8000 5900
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 6114E172
+P 8100 5900
+F 0 "#PWR?" H 8100 5650 50  0001 C CNN
+F 1 "GND" H 8105 5727 50  0000 C CNN
+F 2 "" H 8100 5900 50  0001 C CNN
+F 3 "" H 8100 5900 50  0001 C CNN
+	1    8100 5900
+	1    0    0    -1  
+$EndComp
+Text GLabel 8200 5900 3    50   Input ~ 0
+Cam_TX
+Text GLabel 8300 5900 3    50   Input ~ 0
+Cam_RX
+$Comp
+L Connector:Conn_01x04_Male J4
+U 1 1 610C9665
+P 10050 4050
+F 0 "J4" H 10158 4331 50  0000 C CNN
+F 1 "Molex Mirco 4 Pin #1" H 10158 4240 50  0000 C CNN
+F 2 "Connector_Molex:Molex_Micro-Fit_3.0_43650-0415_1x04_P3.00mm_Vertical" H 10050 4050 50  0001 C CNN
+F 3 "~" H 10050 4050 50  0001 C CNN
+	1    10050 4050
+	1    0    0    -1  
+$EndComp
+Wire Notes Line
+	10700 800  6000 800 
+Wire Wire Line
+	6950 1950 6950 2000
+Wire Wire Line
+	7000 1950 6950 1950
+$Comp
+L power:GND #PWR0101
+U 1 1 60F84700
+P 6950 2000
+F 0 "#PWR0101" H 6950 1750 50  0001 C CNN
+F 1 "GND" H 6955 1827 50  0000 C CNN
+F 2 "" H 6950 2000 50  0001 C CNN
+F 3 "" H 6950 2000 50  0001 C CNN
+	1    6950 2000
+	1    0    0    -1  
+$EndComp
+Text Notes 8000 750  0    50   ~ 0
+Teency & Peripherals
+$Comp
+L RF_Module:ESP32-WROOM-32D U1
+U 1 1 60F81389
+P 8400 1950
+F 0 "U1" V 7500 1900 50  0000 L CNN
+F 1 "ESP32-WROOM-32D" V 7350 1550 50  0000 L CNN
+F 2 "RF_Module:ESP32-WROOM-32" H 8400 450 50  0001 C CNN
+F 3 "https://www.espressif.com/sites/default/files/documentation/esp32-wroom-32d_esp32-wroom-32u_datasheet_en.pdf" H 8100 2000 50  0001 C CNN
+	1    8400 1950
+	0    1    1    0   
+$EndComp
+Text GLabel 8200 2550 3    50   Input ~ 0
+SDA
+Text GLabel 8100 2550 3    50   Input ~ 0
+SCL
+Text GLabel 8600 2550 3    50   Input ~ 0
+RX
+Text GLabel 8500 2550 3    50   Input ~ 0
+TX
+Text GLabel 8400 2550 3    50   Input ~ 0
+SCK
+Text GLabel 8300 2550 3    50   Input ~ 0
+MISO
+Text GLabel 8000 2550 3    50   Input ~ 0
+MOSI
+Text GLabel 9100 2550 3    50   Input ~ 0
+SD_CS
+Text GLabel 9600 2550 3    50   Input ~ 0
+Cam_TX
 $EndSCHEMATC
