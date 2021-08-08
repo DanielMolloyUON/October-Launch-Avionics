@@ -24,7 +24,7 @@ Wire Notes Line
 Wire Notes Line
 	6000 800  6000 6250
 Wire Notes Line
-	10700 800  6000 800 
+	10950 800  6000 800 
 Text Notes 8000 750  0    50   ~ 0
 Teency & Peripherals
 $Comp
@@ -779,7 +779,7 @@ $EndComp
 Wire Notes Line
 	10950 6250 10950 800 
 Wire Notes Line
-	6000 6250 10700 6250
+	6000 6250 10950 6250
 Text GLabel 9700 3300 1    50   Input ~ 0
 D-
 Text GLabel 9800 3300 1    50   Input ~ 0
@@ -923,135 +923,4 @@ Wire Wire Line
 	7300 3000 7450 3000
 Wire Wire Line
 	7450 3000 7450 3500
-$Comp
-L Regulator_Switching:LM2596S-5 U2
-U 1 1 61015F13
-P 2800 1250
-F 0 "U2" H 2800 1617 50  0000 C CNN
-F 1 "LM2596S-5" H 2800 1526 50  0000 C CNN
-F 2 "Package_TO_SOT_SMD:TO-263-5_TabPin3" H 2850 1000 50  0001 L CIN
-F 3 "http://www.ti.com/lit/ds/symlink/lm2596.pdf" H 2800 1250 50  0001 C CNN
-	1    2800 1250
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+5V #PWR0107
-U 1 1 6102E3B5
-P 4150 1150
-F 0 "#PWR0107" H 4150 1000 50  0001 C CNN
-F 1 "+5V" V 4165 1278 50  0000 L CNN
-F 2 "" H 4150 1150 50  0001 C CNN
-F 3 "" H 4150 1150 50  0001 C CNN
-	1    4150 1150
-	0    1    1    0   
-$EndComp
-$Comp
-L Device:L L1
-U 1 1 610792E4
-P 3500 1350
-F 0 "L1" V 3690 1350 50  0000 C CNN
-F 1 "L" V 3599 1350 50  0000 C CNN
-F 2 "" H 3500 1350 50  0001 C CNN
-F 3 "~" H 3500 1350 50  0001 C CNN
-	1    3500 1350
-	0    -1   -1   0   
-$EndComp
-$Comp
-L Device:D D3
-U 1 1 61076105
-P 3350 1500
-F 0 "D3" V 3304 1580 50  0000 L CNN
-F 1 "D" V 3395 1580 50  0000 L CNN
-F 2 "" H 3350 1500 50  0001 C CNN
-F 3 "~" H 3350 1500 50  0001 C CNN
-	1    3350 1500
-	0    1    1    0   
-$EndComp
-Connection ~ 3350 1650
-$Comp
-L power:GND #PWR0105
-U 1 1 61028B2E
-P 1600 1650
-F 0 "#PWR0105" H 1600 1400 50  0001 C CNN
-F 1 "GND" V 1605 1522 50  0000 R CNN
-F 2 "" H 1600 1650 50  0001 C CNN
-F 3 "" H 1600 1650 50  0001 C CNN
-	1    1600 1650
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	2300 1350 2300 1650
-Connection ~ 2300 1650
-Wire Wire Line
-	2300 1650 2800 1650
-Wire Wire Line
-	2800 1550 2800 1650
-Connection ~ 2800 1650
-Wire Wire Line
-	2800 1650 3350 1650
-Wire Wire Line
-	3300 1350 3350 1350
-Connection ~ 3350 1350
-Wire Wire Line
-	3650 1350 3700 1350
-Wire Wire Line
-	3700 1350 3700 1150
-Connection ~ 3700 1150
-Wire Wire Line
-	3700 1150 3300 1150
-Wire Wire Line
-	3700 1150 4150 1150
-$Comp
-L power:GND #PWR0106
-U 1 1 610A5901
-P 4100 1650
-F 0 "#PWR0106" H 4100 1400 50  0001 C CNN
-F 1 "GND" V 4105 1522 50  0000 R CNN
-F 2 "" H 4100 1650 50  0001 C CNN
-F 3 "" H 4100 1650 50  0001 C CNN
-	1    4100 1650
-	0    -1   -1   0   
-$EndComp
-$Comp
-L Device:CP C8
-U 1 1 610A7BB2
-P 3700 1500
-F 0 "C8" H 3818 1546 50  0000 L CNN
-F 1 "CP" H 3818 1455 50  0000 L CNN
-F 2 "" H 3738 1350 50  0001 C CNN
-F 3 "~" H 3700 1500 50  0001 C CNN
-	1    3700 1500
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	3350 1650 3700 1650
-Connection ~ 3700 1350
-Connection ~ 3700 1650
-Wire Wire Line
-	3700 1650 4100 1650
-$Comp
-L Device:CP C7
-U 1 1 610AC176
-P 2050 1400
-F 0 "C7" H 2168 1446 50  0000 L CNN
-F 1 "CP" H 2168 1355 50  0000 L CNN
-F 2 "" H 2088 1250 50  0001 C CNN
-F 3 "~" H 2050 1400 50  0001 C CNN
-	1    2050 1400
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	1600 1150 2050 1150
-Wire Wire Line
-	1600 1650 2050 1650
-Wire Wire Line
-	2050 1250 2050 1150
-Connection ~ 2050 1150
-Wire Wire Line
-	2050 1150 2300 1150
-Wire Wire Line
-	2050 1550 2050 1650
-Connection ~ 2050 1650
-Wire Wire Line
-	2050 1650 2300 1650
 $EndSCHEMATC

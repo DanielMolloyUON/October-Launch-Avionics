@@ -1,4 +1,6 @@
 (sym_lib_table
   (lib (name SamacSys_Parts)(type Legacy)(uri ${KIPRJMOD}/Libraries/SamacSys_Parts.lib)(options "")(descr ""))
   (lib (name October-Launch-Avionics-rescue)(type Legacy)(uri "${KIPRJMOD}/October Launch Avionics-rescue.lib")(options "")(descr ""))
+  (lib (name CP2102N-A01-GQFN20R)(type Legacy)(uri ${KIPRJMOD}/Libraries/CP2102N-A01-GQFN20R.lib)(options "")(descr ""))
+  (lib (name October-Launch-Avionics-Symbol-Library)(type Legacy)(uri ${KIPRJMOD}/Libraries/October-Launch-Avionics-Symbol-Library.lib)(options "")(descr ""))
 )

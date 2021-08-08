@@ -24,7 +24,7 @@ Wire Notes Line
 Wire Notes Line
 	6000 800  6000 6250
 Wire Notes Line
-	10700 800  6000 800 
+	10950 800  6000 800 
 Text Notes 8000 750  0    50   ~ 0
 Teency & Peripherals
 $Comp
@@ -729,7 +729,7 @@ $EndComp
 Text GLabel 9350 5850 1    50   Input ~ 0
 EN
 $Comp
-L Device:R R5
+L October-Launch-Avionics-rescue:R-Device R5
 U 1 1 61088122
 P 9050 5700
 F 0 "R5" H 9120 5746 50  0000 L CNN
@@ -776,40 +776,17 @@ F 3 "https://www.usb.org/sites/default/files/documents/usb_type-c.zip" H 6850 36
 	1    6700 3600
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	9500 2550 9500 2950
-Wire Wire Line
-	9500 2950 10300 2950
-Wire Wire Line
-	10300 2950 10300 3300
 Wire Notes Line
 	10950 6250 10950 800 
 Wire Notes Line
-	6000 6250 10700 6250
+	6000 6250 10950 6250
 Text GLabel 9700 3300 1    50   Input ~ 0
 D-
-Wire Wire Line
-	10200 3100 10200 3300
-Wire Wire Line
-	9300 3100 10200 3100
-Wire Wire Line
-	9300 2550 9300 3100
 Text GLabel 9800 3300 1    50   Input ~ 0
 D+
-Text GLabel 7850 3700 1    50   Input ~ 0
+Text GLabel 7300 3700 1    50   Input ~ 0
 D+
-$Comp
-L Power_Protection:SP0503BAHT D?
-U 1 1 611016B0
-P 7950 4050
-F 0 "D?" H 8155 4096 50  0000 L CNN
-F 1 "SP0503BAHT" H 8155 4005 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:SOT-143" H 8175 4000 50  0001 L CNN
-F 3 "http://www.littelfuse.com/~/media/files/littelfuse/technical%20resources/documents/data%20sheets/sp05xxba.pdf" H 8075 4175 50  0001 C CNN
-	1    7950 4050
-	1    0    0    -1  
-$EndComp
-Text GLabel 8050 3000 2    50   Input ~ 0
+Text GLabel 7300 3000 1    50   Input ~ 0
 VBUS
 NoConn ~ 9500 3300
 NoConn ~ 9200 4700
@@ -823,20 +800,8 @@ NoConn ~ 10400 4700
 NoConn ~ 6400 4500
 NoConn ~ 7300 3300
 NoConn ~ 7300 3200
-Text GLabel 7950 3500 1    50   Input ~ 0
+Text GLabel 7300 3500 1    50   Input ~ 0
 D-
-Wire Wire Line
-	7300 3000 8050 3000
-Wire Wire Line
-	8050 3000 8050 3850
-Wire Wire Line
-	7950 3500 7300 3500
-Wire Wire Line
-	7950 3500 7950 3850
-Wire Wire Line
-	7300 3700 7850 3700
-Wire Wire Line
-	7850 3850 7850 3700
 NoConn ~ 10000 3300
 NoConn ~ 10100 3300
 Text GLabel 10200 5150 0    50   Input ~ 0
@@ -858,17 +823,6 @@ F 3 "~" H 10550 5150 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	10200 4700 10200 4800
-$Comp
-L October-Launch-Avionics-rescue:GND-power #PWR?
-U 1 1 610AAC9B
-P 7950 4250
-F 0 "#PWR?" H 7950 4000 50  0001 C CNN
-F 1 "GND" H 7955 4077 50  0000 C CNN
-F 2 "" H 7950 4250 50  0001 C CNN
-F 3 "" H 7950 4250 50  0001 C CNN
-	1    7950 4250
-	1    0    0    -1  
-$EndComp
 $Comp
 L October-Launch-Avionics-rescue:GND-power #PWR?
 U 1 1 610AB54E
@@ -923,130 +877,50 @@ Wire Wire Line
 Wire Wire Line
 	10750 5150 10700 5150
 NoConn ~ 10550 5950
+Text GLabel 9300 2550 3    50   Input ~ 0
+UART_TX
+Text GLabel 9500 2550 3    50   Input ~ 0
+UART_RX
+Text GLabel 10200 3300 1    50   Input ~ 0
+UART_TX
+Text GLabel 10300 3300 1    50   Input ~ 0
+UART_RX
 $Comp
-L Regulator_Switching:LM2596S-5 U2
-U 1 1 61015F13
-P 2800 1250
-F 0 "U2" H 2800 1617 50  0000 C CNN
-F 1 "LM2596S-5" H 2800 1526 50  0000 C CNN
-F 2 "Package_TO_SOT_SMD:TO-263-5_TabPin3" H 2850 1000 50  0001 L CIN
-F 3 "http://www.ti.com/lit/ds/symlink/lm2596.pdf" H 2800 1250 50  0001 C CNN
-	1    2800 1250
+L October-Launch-Avionics-rescue:GND-power #PWR?
+U 1 1 610AAC9B
+P 7900 3650
+F 0 "#PWR?" H 7900 3400 50  0001 C CNN
+F 1 "GND" H 7905 3477 50  0000 C CNN
+F 2 "" H 7900 3650 50  0001 C CNN
+F 3 "" H 7900 3650 50  0001 C CNN
+	1    7900 3650
 	1    0    0    -1  
 $EndComp
 $Comp
-L pspice:DIODE D3
-U 1 1 61016AD7
-P 3350 1650
-F 0 "D3" V 3304 1778 50  0000 L CNN
-F 1 "DIODE" V 3395 1778 50  0000 L CNN
-F 2 "" H 3350 1650 50  0001 C CNN
-F 3 "~" H 3350 1650 50  0001 C CNN
-	1    3350 1650
-	0    -1   -1   0   
-$EndComp
-$Comp
-L pspice:CAP C8
-U 1 1 61019AA1
-P 3800 1600
-F 0 "C8" H 3978 1646 50  0000 L CNN
-F 1 "CAP" H 3978 1555 50  0000 L CNN
-F 2 "" H 3800 1600 50  0001 C CNN
-F 3 "~" H 3800 1600 50  0001 C CNN
-	1    3800 1600
-	1    0    0    -1  
-$EndComp
-$Comp
-L pspice:CAP C7
-U 1 1 6101A48C
-P 1950 1400
-F 0 "C7" H 2128 1446 50  0000 L CNN
-F 1 "CAP" H 2128 1355 50  0000 L CNN
-F 2 "" H 1950 1400 50  0001 C CNN
-F 3 "~" H 1950 1400 50  0001 C CNN
-	1    1950 1400
-	1    0    0    -1  
-$EndComp
-$Comp
-L pspice:INDUCTOR L1
-U 1 1 6101B1F7
-P 3550 1350
-F 0 "L1" H 3550 1565 50  0000 C CNN
-F 1 "INDUCTOR" H 3550 1474 50  0000 C CNN
-F 2 "" H 3550 1350 50  0001 C CNN
-F 3 "~" H 3550 1350 50  0001 C CNN
-	1    3550 1350
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	3800 1350 3800 1150
-Wire Wire Line
-	3800 1150 3300 1150
-Connection ~ 3800 1350
-Wire Wire Line
-	3800 1850 3350 1850
-Wire Wire Line
-	3350 1350 3350 1450
-Wire Wire Line
-	3350 1850 2800 1850
-Wire Wire Line
-	1950 1850 1950 1650
-Connection ~ 3350 1850
-Wire Wire Line
-	2800 1550 2800 1850
-Connection ~ 2800 1850
-Wire Wire Line
-	2800 1850 2300 1850
-Wire Wire Line
-	2300 1350 2300 1850
-Connection ~ 2300 1850
-Wire Wire Line
-	2300 1850 1950 1850
-Wire Wire Line
-	2300 1150 1950 1150
-Wire Wire Line
-	1950 1150 1600 1150
-Connection ~ 1950 1150
-Wire Wire Line
-	1950 1850 1600 1850
-Connection ~ 1950 1850
-$Comp
-L power:GND #PWR0105
-U 1 1 61028B2E
-P 1600 1850
-F 0 "#PWR0105" H 1600 1600 50  0001 C CNN
-F 1 "GND" V 1605 1722 50  0000 R CNN
-F 2 "" H 1600 1850 50  0001 C CNN
-F 3 "" H 1600 1850 50  0001 C CNN
-	1    1600 1850
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	3800 1850 4100 1850
-Connection ~ 3800 1850
-$Comp
-L power:GND #PWR0106
-U 1 1 6102C328
-P 4100 1850
-F 0 "#PWR0106" H 4100 1600 50  0001 C CNN
-F 1 "GND" V 4105 1722 50  0000 R CNN
-F 2 "" H 4100 1850 50  0001 C CNN
-F 3 "" H 4100 1850 50  0001 C CNN
-	1    4100 1850
+L Power_Protection:SP0503BAHT D?
+U 1 1 611016B0
+P 7650 3600
+F 0 "D?" H 7855 3646 50  0000 L CNN
+F 1 "SP0503BAHT" H 7855 3555 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-143" H 7875 3550 50  0001 L CNN
+F 3 "http://www.littelfuse.com/~/media/files/littelfuse/technical%20resources/documents/data%20sheets/sp05xxba.pdf" H 7775 3725 50  0001 C CNN
+	1    7650 3600
 	0    -1   -1   0   
 $EndComp
 Wire Wire Line
-	3800 1150 4150 1150
-Connection ~ 3800 1150
-$Comp
-L power:+5V #PWR0107
-U 1 1 6102E3B5
-P 4150 1150
-F 0 "#PWR0107" H 4150 1000 50  0001 C CNN
-F 1 "+5V" V 4165 1278 50  0000 L CNN
-F 2 "" H 4150 1150 50  0001 C CNN
-F 3 "" H 4150 1150 50  0001 C CNN
-	1    4150 1150
-	0    1    1    0   
-$EndComp
+	7900 3650 7900 3600
+Wire Wire Line
+	7900 3600 7850 3600
+Wire Wire Line
+	7300 3700 7450 3700
+Wire Wire Line
+	7300 3500 7400 3500
+Wire Wire Line
+	7400 3500 7400 3600
+Wire Wire Line
+	7400 3600 7450 3600
+Wire Wire Line
+	7300 3000 7450 3000
+Wire Wire Line
+	7450 3000 7450 3500
 $EndSCHEMATC
